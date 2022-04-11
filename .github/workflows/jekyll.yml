@@ -1,20 +1,4 @@
-# This script deploys your website automatically
-name: CI
-
-# Only trigger this script when you push to the master branch
-on:
-  push:
-    branches: [ master ]
-
-# Specify the tasks to run when this script gets triggered
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    # Download our master branch
-    steps:
-    - uses: actions/checkout@v2
-
-    # Run our deployment command
-    - name: Deploying the static website to gh-pages
-      run: npm run deploy
+- name: npm publish on every push
+  # You may pin to the exact commit or the version.
+  # uses: shawnbot/npm-publish-action@0c4a3b9e470b35d1501c6295ebf64b39562c3001
+  uses: shawnbot/npm-publish-action@v1.0.1
