@@ -5,7 +5,7 @@ import { useState } from 'react';
 function App() {
   const [counter, setCounter] = useState(0);
   return (
-    <div className="App">
+    <div className="App" style={{margin:"50px"}}>
       <div>counter {counter} </div>
       <div><button onClick={()=>setCounter(counter+1)}>Incriment</button></div>
     </div>
