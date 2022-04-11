@@ -1,11 +1,21 @@
-name: Deploy to GitHub Pages
-  uses: Cecilapp/GitHub-Pages-deploy@v3
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  with:
-    email: nagaraju_sangam@yahoo.co.in
-    build_dir: _site               # optional
-    branch: website                # optional
-    cname: domain.tld              # optional
-    jekyll: no                     # optional
-    commit_message: custom message # optional
+name: Deploy to Github Pages
+
+on: push
+
+jobs:
+  deploy:
+    name: Deploying to Github Pages
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v2
+
+      - name: Authorizing Github action
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+        uses: oleksiyrudenko/gha-git-credentials@v1
+
+      - name: Doploy to GitHub Pages
+        uses: nasangam/react-counter@v0.1.0
