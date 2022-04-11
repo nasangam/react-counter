@@ -4,18 +4,17 @@ on: push
 
 jobs:
   deploy:
-    name: Deploying to Github Pages
-
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout branch
-        uses: actions/checkout@v2
-
-      - name: Authorizing Github action
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm ci
+      - name: Push changes
+        uses: ptienchuan/deploy-github-pages-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          token: "${{ secrets.GITHUB_TOKEN }}"
-        uses: oleksiyrudenko/gha-git-credentials@v1
-
-      - name: Doploy to GitHub Pages
-        uses: amitsingh-007/deploy-to-github-pages@v1.1
+          source-directory: "dist"
+          target-branch: "gh-pages"
+          user-name: "nagaraju sangam"
+          user-email: "nagaraju_sangam@yahoo.co.in"
