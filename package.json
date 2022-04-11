@@ -13,6 +13,11 @@
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
+  "husky" :{
+    "hooks": {
+      "pre-commit" : "npm run build"
+    }
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -38,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "husky": "^7.0.4"
   }
 }
