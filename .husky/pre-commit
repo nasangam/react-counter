@@ -1,5 +1,7 @@
+#npx husky-init created this file
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
+
 
 #npm test
 npm run prettier
