@@ -15,7 +15,7 @@ jobs:
       - name: Authorizing Github action
         with:
           token: "${{ secrets.GITHUB_TOKEN }}"
-        uses: amitsingh-007/deploy-to-github-pages@v1.1
+        uses: oleksiyrudenko/gha-git-credentials@v1
 
       - name: Doploy to GitHub Pages
-        uses: nasangam/react-counter@v0.1.0
+        uses: amitsingh-007/deploy-to-github-pages@v1.1
