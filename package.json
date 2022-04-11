@@ -14,7 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "PATH=$PATH:./node_modules/.bin & npm run build",
+    "predeploy2": "PATH=$PATH:./node_modules/.bin & npm run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "CI=false npx react-scripts build",
