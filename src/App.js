@@ -10,7 +10,8 @@ function App() {
         <div>counter : {counter} </div>
       <div><button onClick={()=>setCounter(counter+1)}>Incriment</button></div>
       <div>API_KEY: {process.env.REACT_APP_MY_API_KEY}</div>
-      <div>API_KEY: {process.env.NODE_ENV}</div>
+      <div>NODE_ENV: {process.env.NODE_ENV}</div>
+      <div>API_BASE: {process.env.REACT_APP_API_BASE}</div>
     </div>
   );
 }
