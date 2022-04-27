@@ -5,4 +5,4 @@
 
 #npm test
 #npm run prettier
-npm run build
+#npm run build
